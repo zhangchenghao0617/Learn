@@ -1,0 +1,5 @@
+apple 10 3
+tesla 10 1
+mac 30 2
+lenovo 30 3
+chicken 10 3
