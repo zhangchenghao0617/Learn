@@ -1,85 +1,87 @@
 # 1.看代码分析结果
-# func_list = []
-# for i in range(10):
-#     func_list.append(lambda: i)
-# v1 = func_list[0]()
-# v2 = func_list[5]()
-# print(v1, v2)
+"""
+func_list = []
+for i in range(10):
+    func_list.append(lambda: i)
+v1 = func_list[0]()
+v2 = func_list[5]()
+print(v1, v2)
+"""
 
 # 2.看代码分析结果
-
-# func_list = []
-#
-# for i in range(10):
-#     func_list.append(lambda x: x + i)
-#
-# v1 = func_list[0](2)
-# v2 = func_list[5](1)
-# print(v1, v2)
-
+"""
+func_list = []
+for i in range(10):
+    func_list.append(lambda x: x + i)
+v1 = func_list[0](2)
+v2 = func_list[5](1)
+print(v1, v2)
+"""
 
 # 3.看代码分析结果
-
-# func_list = []
-#
-# for i in range(10):
-#     func_list.append(lambda x: x + i)
-#
-# for i in range(0, len(func_list)):
-#     result = func_list[i](i)
-#     print(result)
+"""
+func_list = []
+for i in range(10):
+    func_list.append(lambda x: x + i)
+print(func_list[0](0))
+for i in range(0, len(func_list)):
+    result = func_list[i](i)
+    print(result)
+"""
 
 # 4.看代码写结果（面试题）：
-
-# def func(name):
-#     v = lambda x: x + name
-#     return v
-# v1 = func('太白')
-# v2 = func('alex')
-# v3 = v1('银角')
-# v4 = v2('金角')
-# print(v1, v2, v3, v4)
+"""
+def func(name):
+    v = lambda x: x + name
+    return v
+v1 = func('太白')
+v2 = func('alex')
+v3 = v1('银角')
+v4 = v2('金角')
+print(v1, v2, v3, v4)
+"""
 
 # 5.看代码写结果【面试题】
-
-# result = []
-# for i in range(10):
-#     func = lambda: i  # 注意：函数不执行，内部代码不会执行。
-#     result.append(func)
-# print(i)
-# print(result)
-# v1 = result[0]()
-# v2 = result[9]()
-# print(v1, v2)
+"""
+result = []
+for i in range(10):
+    func = lambda: i  # 注意：函数不执行，内部代码不会执行。
+    result.append(func)
+print(i)
+print(result)
+v1 = result[0]()
+v2 = result[9]()
+print(v1, v2)
+"""
 
 # 6.看代码分析结果【面试题】
-# def func(num):
-#     def inner():
-#         print(num)
-#
-#     return inner
-#
-#
-# result = []
-# for i in range(10):
-#     f = func(i)
-#     result.append(f)
-#
-# print(i)
-# print(result)
-# v1 = result[0]()
-# v2 = result[9]()
-# print(v1, v2)
+"""
+def func(num):
+    def inner():
+        print(num)
+    return inner
+result = []
+for i in range(10):
+    result.append(func(i))
+print(i)
+print(result)
+v1 = result[0]()
+v2 = result[9]()
+print(v1, v2)
+"""
 
 # 7.看代码写结果【新浪微博面试题】
-# def func():
-#     for num in range(10):
-#         pass
-#     v4 = [lambda: num + 10, lambda: num + 100, lambda: num + 100, ]
-#     result1 = v4[1]()
-#     result2 = v4[2]()
-#     print(result1, result2)
-# func()
+"""
+def func():
+    for num in range(10):
+        pass
+    v4 = [lambda: num + 10, lambda: num + 100, lambda: num + 100, ]
+    result1 = v4[1]()
+    result2 = v4[2]()
+    print(result1)
+func()
+"""
+
 
 # 8.请编写一个函数实现将IP地址转换成一个整数。【面试题，较难, 可以先做其他题】
 # 如 10.3.9.12 转换规则为二进制：
